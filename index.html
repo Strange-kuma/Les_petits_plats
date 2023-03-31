@@ -1,65 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=100%, initial-scale=1.0" />
     <link rel="stylesheet" href="stylesheet\style.css" />
 
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <a class="header_logo">
-            <img src="stylesheet/import/logo.svg" class="header_logo" alt="Logo les petits plats" />
-        </a>
+      <a class="header_logo">
+        <img
+          src="stylesheet/import/logo.svg"
+          class="header_logo"
+          alt="Logo les petits plats"
+        />
+      </a>
     </header>
     <main>
-        <section id="section_search">
-            <div id="wrapper_input_search">
-                <input type="search" placeholder="Rechercher une recette" name="Search_input" id="Search_input" />
-                <ion-icon name="search"></ion-icon>
+      <section id="section_search">
+        <div id="error"></div>
+        <div id="wrapper_input_search">
+          <input
+            type="search"
+            placeholder="Rechercher une recette"
+            name="Search_input"
+            id="Search_input"
+          />
+          <ion-icon id="search_clue" name="search"></ion-icon>
+        </div>
+        <div id="wrapper_dropdown_search">
+          <div class="dropdown">
+            <button class="dropbtn" id="dropbtn1">
+              Ingredients <ion-icon name="arrow-dropdown"></ion-icon>
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
             </div>
-            <div id="wrapper_dropdown_search">
-                <div class="dropdown">
-                    <button class="dropbtn" id="dropbtn1">Ingredients <ion-icon
-                            name="arrow-dropdown"></ion-icon></button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn" id="dropbtn2">Appareils <ion-icon name="arrow-dropdown"></ion-icon></button>
-                    <div id="myDropdown2" class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn" id="dropbtn3">Ustensiles <ion-icon
-                            name="arrow-dropdown"></ion-icon></button>
-                    <div id="myDropdown3" class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn" id="dropbtn2">
+              Appareils <ion-icon name="arrow-dropdown"></ion-icon>
+            </button>
+            <div id="myDropdown2" class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
             </div>
-        </section>
-        <section id="section_recipe">
-            
-        </section>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn" id="dropbtn3">
+              Ustensiles <ion-icon name="arrow-dropdown"></ion-icon>
+            </button>
+            <div id="myDropdown3" class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section_recipe">
+        <article>
+          <div class="legendecard">
+            <div class="title">
+              <h3>azeezrzer</h3>
+              <span><ion-icon name="time"></ion-icon> 20 min</span>
+            </div>
+            <div class="content">
+              <div class="ingredient">
+                <ul>
+                  <li>carrotte</li>
+                  <li>carrotte</li>
+                  <li>carrotte</li>
+                </ul>
+              </div>
+              <div class="descriptif">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Voluptatibus voluptate adipisci ipsa nostrum accusamus
+                  voluptas provident quasi, pariatur eaque sint. Ut adipisci
+                  mollitia dolor. Beatae minima quas quod soluta sed.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
     </main>
 
+    <script src="js/Fetch.js"></script>
+    <script src="js/tri.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="js/dropdown.js"></script>
-    <script src="js/Fetch.js"></script>
     <script src="js/card.js"></script>
-</body>
-
+  </body>
 </html>
