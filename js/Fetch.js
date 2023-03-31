@@ -1,9 +1,9 @@
 let allRecipes = []
-
-const reponse = fetch('js/recipes.json').then((res) => res.json())
- reponse.then((data) => {
-    data.recipes
-    console.log(data.recipes)
-    allRecipes = [...data.recipes]
-    console.log(allRecipes)
-})
+const fetchRecipes = async () => {
+    // Récupération des pièces depuis le fichier JSON
+    await fetch('js/recipes.json')
+        .then((res) => res.json())
+        .then((data) => allRecipes = data.recipes); 
+        
+       
+}
