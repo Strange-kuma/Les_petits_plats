@@ -1,9 +1,6 @@
 const recipeDisplay = async () => {
     await fetchRecipes();
 
-    allRecipes.forEach(function (number) {
-        // console.log(number);
-    });
     let sectionRecipes = document.querySelector('#section_recipe')
  
     sectionRecipes.innerHTML = allRecipes.map((Recipes) => {
@@ -11,10 +8,9 @@ const recipeDisplay = async () => {
         let recipeIngredients = Recipes.ingredients
         let ingredientsHtml = recipeIngredients.map((ing)=>
           ` <li>
-          ${ing.ingredient}
+        <span>${ing.ingredient}</span> : ${ing.quantity} ${ing.unit}
           </li>`
         ).join("")
-        // probleme : ne trouve pas tout les ingredient ligne 20
         return `
         <article>
         <div class="legendecard">

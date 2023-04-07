@@ -67,6 +67,16 @@ body {
                 display: inline-block;
                 padding-top: 15px;
 
+                #myDropdown {
+                    ul {
+                        padding: 0;
+
+                        li {
+                            list-style: none;
+                        }
+                    }
+                }
+
                 #dropbtn2 {
                     background-color: #20d47a;
 
@@ -74,6 +84,14 @@ body {
 
                 #myDropdown2 {
                     background-color: #20d47a !important;
+
+                    ul {
+                        padding: 0;
+
+                        li {
+                            list-style: none;
+                        }
+                    }
 
                 }
 
@@ -84,6 +102,14 @@ body {
 
                 #myDropdown3 {
                     background-color: #ed6454 !important;
+
+                    ul {
+                        padding: 0;
+
+                        li {
+                            list-style: none;
+                        }
+                    }
 
                 }
 
@@ -112,7 +138,7 @@ body {
                     position: absolute;
                     background-color: #0072ff;
                     min-width: 160px;
-                    width: 94%;
+
                     margin-top: -5px;
                     z-index: 1;
 
@@ -133,8 +159,12 @@ body {
 
             /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
             .show {
-                display: block !important;
-
+                
+                display: flex !important;
+                ul{
+                   
+                    width: 120px;
+                }
             }
         }
 
@@ -153,14 +183,14 @@ body {
             justify-content: end;
             min-width: 300px;
             width: calc(100% / 3 - 30px);
-            height: 450px;
+            height: 500px;
             background-color: #b1b1b1;
             margin-bottom: 35px;
             border-radius: 5px;
 
             .legendecard {
                 width: 100%;
-                height: 200px;
+                height: 300px;
                 background-color: #ddd;
 
                 .title {
@@ -168,6 +198,11 @@ body {
                     align-items: center;
                     justify-content: space-between;
                     padding: 7px;
+
+                    span {
+                        font-weight: bold;
+                        font-size: 20px;
+                    }
                 }
 
                 .content {
@@ -177,9 +212,17 @@ body {
                     .ingredient {
                         width: calc(100%/2);
 
-                        ul li {
+                        ul {
+                            padding: 10px;
 
-                            list-style: none;
+                            li {
+
+                                list-style: none;
+
+                                span {
+                                    font-weight: bold;
+                                }
+                            }
                         }
                     }
 
@@ -188,8 +231,7 @@ body {
                         overflow: hidden;
 
                         p {
-                            // height: 90px;
-                            background-color: #20d47a;
+
                             display: -webkit-box;
                             -webkit-line-clamp: 6;
                             -webkit-box-orient: vertical;

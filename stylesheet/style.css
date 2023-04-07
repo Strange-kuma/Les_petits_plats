@@ -62,17 +62,35 @@ body #section_search #wrapper_dropdown_search .dropdown {
   /* Dropdown Button */
   /* Dropdown Content (Hidden by Default) */
 }
+body #section_search #wrapper_dropdown_search .dropdown #myDropdown ul {
+  padding: 0;
+}
+body #section_search #wrapper_dropdown_search .dropdown #myDropdown ul li {
+  list-style: none;
+}
 body #section_search #wrapper_dropdown_search .dropdown #dropbtn2 {
   background-color: #20d47a;
 }
 body #section_search #wrapper_dropdown_search .dropdown #myDropdown2 {
   background-color: #20d47a !important;
 }
+body #section_search #wrapper_dropdown_search .dropdown #myDropdown2 ul {
+  padding: 0;
+}
+body #section_search #wrapper_dropdown_search .dropdown #myDropdown2 ul li {
+  list-style: none;
+}
 body #section_search #wrapper_dropdown_search .dropdown #dropbtn3 {
   background-color: #ed6454;
 }
 body #section_search #wrapper_dropdown_search .dropdown #myDropdown3 {
   background-color: #ed6454 !important;
+}
+body #section_search #wrapper_dropdown_search .dropdown #myDropdown3 ul {
+  padding: 0;
+}
+body #section_search #wrapper_dropdown_search .dropdown #myDropdown3 ul li {
+  list-style: none;
 }
 body #section_search #wrapper_dropdown_search .dropdown .dropbtn {
   background-color: #0072ff;
@@ -93,7 +111,6 @@ body #section_search #wrapper_dropdown_search .dropdown .dropdown-content {
   position: absolute;
   background-color: #0072ff;
   min-width: 160px;
-  width: 94%;
   margin-top: -5px;
   z-index: 1;
   /* Links inside the dropdown */
@@ -109,7 +126,10 @@ body #section_search #wrapper_dropdown_search .dropdown .dropdown-content a:hove
   background-color: #ddd;
 }
 body #section_search #wrapper_dropdown_search .show {
-  display: block !important;
+  display: flex !important;
+}
+body #section_search #wrapper_dropdown_search .show ul {
+  width: 120px;
 }
 body #section_recipe {
   display: flex;
@@ -124,14 +144,14 @@ body #section_recipe article {
   justify-content: end;
   min-width: 300px;
   width: calc(33.3333333333% - 30px);
-  height: 450px;
+  height: 500px;
   background-color: #b1b1b1;
   margin-bottom: 35px;
   border-radius: 5px;
 }
 body #section_recipe article .legendecard {
   width: 100%;
-  height: 200px;
+  height: 300px;
   background-color: #ddd;
 }
 body #section_recipe article .legendecard .title {
@@ -140,6 +160,10 @@ body #section_recipe article .legendecard .title {
   justify-content: space-between;
   padding: 7px;
 }
+body #section_recipe article .legendecard .title span {
+  font-weight: bold;
+  font-size: 20px;
+}
 body #section_recipe article .legendecard .content {
   display: flex;
   width: 100%;
@@ -147,15 +171,20 @@ body #section_recipe article .legendecard .content {
 body #section_recipe article .legendecard .content .ingredient {
   width: 50%;
 }
+body #section_recipe article .legendecard .content .ingredient ul {
+  padding: 10px;
+}
 body #section_recipe article .legendecard .content .ingredient ul li {
   list-style: none;
+}
+body #section_recipe article .legendecard .content .ingredient ul li span {
+  font-weight: bold;
 }
 body #section_recipe article .legendecard .content .descriptif {
   width: 50%;
   overflow: hidden;
 }
 body #section_recipe article .legendecard .content .descriptif p {
-  background-color: #20d47a;
   display: -webkit-box;
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
