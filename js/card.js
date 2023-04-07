@@ -8,7 +8,7 @@ const recipeDisplay = async () => {
         let recipeIngredients = Recipes.ingredients
         let ingredientsHtml = recipeIngredients.map((ing)=>
           ` <li>
-        <span>${ing.ingredient}</span> : ${ing.quantity} ${ing.unit}
+        <span>${ing.ingredient}</span> : ${ing.quantity ? ing.quantity.toString().trim() : ""} ${ing.unit ? ing.unit.toLowerCase().trim() : ""}
           </li>`
         ).join("")
         return `
