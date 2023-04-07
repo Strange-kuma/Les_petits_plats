@@ -2,21 +2,68 @@ let ButtonIngredient = document.querySelector("#dropbtn1")
 let ButtonAppareil = document.querySelector("#dropbtn2")
 let ButtonUstensile = document.querySelector("#dropbtn3")
 
-ButtonIngredient.addEventListener('click', function () {
-    document.querySelector('#myDropdown').classList.toggle("show");
-   
-    
-})
-ButtonAppareil.addEventListener('click', function () {
-    document.querySelector('#myDropdown2').classList.toggle("show");
-  
-})
-ButtonUstensile.addEventListener('click', function () {
-    document.querySelector('#myDropdown3').classList.toggle("show");
-   
-})
+let dropdownContentsIngredient = document.querySelector('#myDropdown')
+let dropdownContentsAppareil = document.querySelector('#myDropdown2')
+let dropdownContentsUstensile = document.querySelector('#myDropdown3')
 
-// Close the dropdown menu if the user clicks outside of it
+
+// document.querySelectorAll(".dropbtn").forEach(button => {
+//     button.addEventListener('click', event => {
+//        dropdowncontent.classList.toggle("show")
+
+//     });
+// });
+
+
+
+async function dropdowncontent() {
+    await fetchRecipes();
+
+
+
+    ButtonIngredient.addEventListener('click', function () {
+        dropdownContentsIngredient.classList.toggle("show");
+        dropdownContentsIngredient.innerHTML = allRecipes.map((recipes) => {
+          
+
+
+            let ingredient =recipes.ingredients
+       
+
+                let ingredientList = ingredient.map((ing) =>
+                    `<li><a href="">${ing.ingredient}</a></li>`
+                ).join("")
+                return `
+
+                <div><ul>${ingredientList}</ul></div>
+                `
+            }).join("")
+        })
+
+            ButtonAppareil.addEventListener('click', function () {
+                dropdownContentsAppareil.classList.toggle("show");
+                dropdownContentsAppareil.innerHTML = allRecipes.map((recipes) => {
+                    let appareil = recipes.appliance
+
+
+                    let appareilList = appareil.map((ing) =>
+                        `<li><a href="">${ing.appliance}</a></li>`
+                    ).join("")
+                    return `
+          
+            <div><ul>${appareilList}</ul></div>
+            `
+                }).join("")
+            })
+        ButtonUstensile.addEventListener('click', function () {
+            dropdownContentsUstensile.classList.toggle("show");
+
+        })
+
+        // let ustensils = recipes.ustensils
+    }
+dropdowncontent()
+
 window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -25,7 +72,9 @@ window.onclick = function (event) {
             var openDropdown = dropdowns[i];
             if (openDropdown.classList.contains('show')) {
                 openDropdown.classList.remove('show');
+                dropdownContentsIngredient.innerHTML = ""
+                dropdownContentsAppareil.innerHTML = ""
             }
         }
     }
-} 
+}
