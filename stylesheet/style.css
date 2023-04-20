@@ -127,6 +127,7 @@ header {
   font-size: 15px;
 }
 #wrapper_dropdown_search .dropdown .dropdown-content-ingredient .Dplistingredient ul li a:hover {
+  cursor: pointer;
   background-color: rgba(255, 255, 255, 0.4509803922);
 }
 #wrapper_dropdown_search .dropdown:nth-child(2) {
@@ -158,6 +159,7 @@ header {
   font-size: 15px;
 }
 #wrapper_dropdown_search .dropdown:nth-child(2) .dropdown-content-appareil .Dplistingredient ul li a:hover {
+  cursor: pointer;
   background-color: rgba(255, 255, 255, 0.4509803922);
 }
 #wrapper_dropdown_search .dropdown:nth-child(3) {
@@ -189,6 +191,7 @@ header {
   font-size: 15px;
 }
 #wrapper_dropdown_search .dropdown:nth-child(3) .dropdown-content-ustencil .Dplistingredient ul li a:hover {
+  cursor: pointer;
   background-color: rgba(255, 255, 255, 0.4509803922);
 }
 #wrapper_dropdown_search .dropdown:hover {
