@@ -61,10 +61,80 @@
 
         &:nth-child(2) {
             background-color: #20d47a;
+
+            .dropdown-content-appareil {
+                width: 100%;
+                cursor: auto;
+
+                .Dplistingredient {
+                    display: flex;
+                    flex-wrap: wrap;
+                    color: #fff;
+
+                    ul {
+                        padding: 0;
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        li {
+
+                            list-style: none;
+                            width: calc(100%/7);
+                            padding: 4px 0 4px 20px;
+
+                            a {
+                                padding: 10px;
+                                text-decoration: none;
+                                color: white;
+                                font-size: 15px;
+
+                                &:hover {
+                                    background-color: #ffffff73;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         &:nth-child(3) {
             background-color: #ed6454;
+            
+            .dropdown-content-ustencil {
+                width: 100%;
+                cursor: auto;
+
+                .Dplistingredient {
+                    display: flex;
+                    flex-wrap: wrap;
+                    color: #fff;
+
+                    ul {
+                        padding: 0;
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        li {
+
+                            list-style: none;
+                            width: calc(100%/6);
+                            padding: 4px 0 4px 20px;
+
+                            a {
+                                padding: 10px;
+                                text-decoration: none;
+                                color: white;
+                                font-size: 15px;
+
+                                &:hover {
+                                    background-color: #ffffff73;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         &:hover {
