@@ -51,6 +51,8 @@
                             font-size: 15px;
 
                             &:hover {
+                                cursor: pointer;
+
                                 background-color: #ffffff73;
                             }
                         }
@@ -89,6 +91,8 @@
                                 font-size: 15px;
 
                                 &:hover {
+                                    cursor: pointer;
+
                                     background-color: #ffffff73;
                                 }
                             }
@@ -100,7 +104,7 @@
 
         &:nth-child(3) {
             background-color: #ed6454;
-            
+
             .dropdown-content-ustencil {
                 width: 100%;
                 cursor: auto;
@@ -128,6 +132,7 @@
                                 font-size: 15px;
 
                                 &:hover {
+                                    cursor: pointer;
                                     background-color: #ffffff73;
                                 }
                             }

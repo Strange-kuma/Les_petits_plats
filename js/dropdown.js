@@ -41,7 +41,7 @@ async function dropdowncontentIngredient() {
     let ingredientList = "";
     dropdownContentIngredient.innerHTML = tabIngredients.forEach(
         (ingredient) => {
-            ingredientList += `<li><a class="ingredient-link" href="">${ingredient}</a></li>`;
+            ingredientList += `<li><a class="ingredient-link" >${ingredient}</a></li>`;
         }
     );
     dropdownContentIngredient.innerHTML = `
@@ -85,7 +85,7 @@ async function dropdowncontentAppareil() {
     let AppareilList = "";
     dropdownContentAppareil.innerHTML = tabAppareil.forEach(
         (appliance) => {
-            AppareilList += `<li><a class="appareil-link" href="">${appliance}</a></li>`;
+            AppareilList += `<li><a class="appareil-link" >${appliance}</a></li>`;
         }
     );
     dropdownContentAppareil.innerHTML = `
@@ -128,7 +128,7 @@ async function dropdowncontentUstencile() {
     let UstencileList = "";
     dropdownContentUstencile.innerHTML = tabUstencile.forEach(
         (appliance) => {
-            UstencileList += `<li><a class="ustenciles-link" href="">${appliance}</a></li>`;
+            UstencileList += `<li><a class="ustenciles-link" >${appliance}</a></li>`;
         }
     );
     dropdownContentUstencile.innerHTML = `
