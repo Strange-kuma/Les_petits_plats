@@ -1,71 +1,141 @@
-let ButtonIngredient = document.querySelector("#dropbtn1");
-let ButtonAppareil = document.querySelector("#dropbtn2");
-let ButtonUstensile = document.querySelector("#dropbtn3");
-
-let dropdownContentsIngredient = document.querySelector("#myDropdown");
-let dropdownContentsAppareil = document.querySelector("#myDropdown2");
-let dropdownContentsUstensile = document.querySelector("#myDropdown3");
-
+let dropdownIngredient = document.querySelector('.Ingredient')
+let dropdownAppareil = document.querySelector('.Appareil')
+let dropdownUstencile = document.querySelector('.Ustencile')
+let dropdown = document.querySelectorAll('.dropdown')
+dropdownIngredient.innerHTML = `
+<p>Ingredient</p><ion-icon name="arrow-dropdown"></ion-icon>
+`
+dropdownAppareil.innerHTML = `<p>Appareil</p><ion-icon name="arrow-dropdown"></ion-icon>`
+dropdownUstencile.innerHTML = `<p>Ustencile</p><ion-icon name="arrow-dropdown"></ion-icon>`
 
 //-------------------------------------
-//fonction d'affichage du dropdown ingredient
+//fonction d'affichage de dropdown ingredient /*--DEBUT--*/
 //-------------------------------------
+dropdownIngredient.addEventListener('click', () => {
+    dropdownIngredient.style.width = "1200px"
+    dropdownIngredient.style.height = "800px"
+    dropdownIngredient.style.flexDirection = "column"
+    dropdownIngredient.innerHTML = `
+    <input type="search" placeholder="Rechercher un ingrédient" name="" id="">
+    <div class="dropdown-content-ingredient"></div>
+    `
+    dropdowncontentIngredient()
+})
 async function dropdowncontentIngredient() {
-  await fetchRecipes();
-
-  ButtonIngredient.addEventListener("click", function () {
+    await fetchRecipes();
+    let dropdownContentIngredient = document.querySelector('.dropdown-content-ingredient')
     const deleteDuplicates = (array) => {
-      let cleanDuplicate = [];
-      array.forEach((item) => {
-        cleanDuplicate.indexOf(item) == -1 ? cleanDuplicate.push(item) : "";
-      });
-      return cleanDuplicate;
+        let cleanDuplicate = [];
+        array.forEach((item) => {
+            cleanDuplicate.indexOf(item) == -1 ? cleanDuplicate.push(item) : "";
+        });
+        return cleanDuplicate;
     };
     let allIngredients = [];
     allRecipes.map((recipe) => {
-      recipe.ingredients.forEach((ing) => {
-        allIngredients.push(ing.ingredient);
-      });
+        recipe.ingredients.forEach((ing) => {
+            allIngredients.push(ing.ingredient);
+        });
     });
     let tabIngredients = deleteDuplicates(allIngredients);
     let ingredientList = "";
-    dropdownContentsIngredient.classList.toggle("show");
-    dropdownContentsIngredient.innerHTML = tabIngredients.forEach(
-      (ingredient) => {
-        ingredientList += `<li><a href="">${ingredient}</a></li>`;
-      }
+    dropdownContentIngredient.innerHTML = tabIngredients.forEach(
+        (ingredient) => {
+            ingredientList += `<li><a class="ingredient-link" href="">${ingredient}</a></li>`;
+        }
     );
-    dropdownContentsIngredient.innerHTML = `
-        <div class='Dplistingredient'> <ul> ${ingredientList}</ul></div>
-        `;
-  });
+    dropdownContentIngredient.innerHTML = `
+          <div class='Dplistingredient'> <ul> ${ingredientList}</ul></div>
+          `;
 }
 //-------------------------------------
-//fonction d'affichage du dropdown appareil 
+//fonction d'affichage de dropdown ingredient /*--FIN--*/
 //-------------------------------------
-function dropdowncontentAppareil() {
-  ButtonAppareil.addEventListener('click', function () {
+
+
+//-------------------------------------
+//fonction d'affichage de dropdown appareil /*--DEBUT--*/
+//-------------------------------------
+dropdownAppareil.addEventListener('click', () => {
+    dropdownAppareil.innerHTML = `<input type="search" placeholder="Rechercher un ingrédient" name="" id="">`
+    dropdownAppareil.style.width = "1000px"
+    dropdownAppareil.style.height = "200px"
+    dropdownAppareil.style.flexDirection = "column"
+    dropdownAppareil.innerHTML = `
+    <input type="search" placeholder="Rechercher un appareil" name="" id="">
+    <div class="dropdown-content-appareil"></div>
+    `
+    dropdowncontentAppareil()
+})
+async function dropdowncontentAppareil() {
+    await fetchRecipes();
+    let dropdownContentAppareil = document.querySelector('.dropdown-content-appareil')
     const deleteDuplicates = (array) => {
-      let cleanDuplicate = [];
-      array.forEach((item) => {
-        cleanDuplicate.indexOf(item) == -1 ? cleanDuplicate.push(item) : "";
-      });
-      return cleanDuplicate;
+        let cleanDuplicate = [];
+        array.forEach((item) => {
+            cleanDuplicate.indexOf(item) == -1 ? cleanDuplicate.push(item) : "";
+        });
+        return cleanDuplicate;
     };
-    dropdownContentsAppareil.classList.toggle("show");
-    let tabAppareil = deleteDuplicates(allRecipes.appliance);
+    let allAppareil = [];
+    allRecipes.forEach((appliances) => {
+        allAppareil.push(appliances.appliance);
+    });
+    let tabAppareil = deleteDuplicates(allAppareil);
     let AppareilList = "";
-    dropdownContentsAppareil.classList.toggle("show");
-    dropdownContentsAppareil.innerHTML = tabAppareil.forEach(
-      (Appareil) => {
-        AppareilList += `<li><a href="">${Appareil}</a></li>`;
-      }
+    dropdownContentAppareil.innerHTML = tabAppareil.forEach(
+        (appliance) => {
+            AppareilList += `<li><a class="appareil-link" href="">${appliance}</a></li>`;
+        }
     );
-    dropdownContentsAppareil.innerHTML = `
-        <div class='Dplistingredient'> <ul> ${AppareilList}</ul></div>
-        `;
-  })
+    dropdownContentAppareil.innerHTML = `
+          <div class='Dplistingredient'> <ul> ${AppareilList}</ul></div>
+          `;
 }
+//-------------------------------------
+//fonction d'affichage de dropdown appareil /*--FIN--*/
+//-------------------------------------
+//-------------------------------------
+//fonction d'affichage de dropdown ustenciles /*--DEBUT--*/
+//-------------------------------------
+dropdownUstencile.addEventListener('click', () => {
+    dropdownUstencile.innerHTML = `<input type="search" placeholder="Rechercher un ingrédient" name="" id="">`
+    dropdownUstencile.style.width = "1000px"
+    dropdownUstencile.style.height = "800px"
+    dropdownUstencile.style.flexDirection = "column"
+    dropdownUstencile.innerHTML = `
+    <input type="search" placeholder="Rechercher un ingrédient" name="" id="">
+    <div class="dropdown-content-ustencil"></div>
+    `
+    dropdowncontentUstencile()
+})
 
-
+async function dropdowncontentUstencile() {
+    await fetchRecipes();
+    let dropdownContentUstencile = document.querySelector('.dropdown-content-ustencil')
+    const deleteDuplicates = (array) => {
+        let cleanDuplicate = [];
+        array.forEach((item) => {
+            cleanDuplicate.indexOf(item) == -1 ? cleanDuplicate.push(item) : "";
+        });
+        return cleanDuplicate;
+    };
+    let allUstencile = [];
+    allRecipes.forEach((ustensils) => {
+        allUstencile.push(ustensils.ustensils);
+    });
+    let tabUstencile = deleteDuplicates(allUstencile);
+    let UstencileList = "";
+    dropdownContentUstencile.innerHTML = tabUstencile.forEach(
+        (appliance) => {
+            UstencileList += `<li><a class="ustenciles-link" href="">${appliance}</a></li>`;
+        }
+    );
+    dropdownContentUstencile.innerHTML = `
+          <div class='Dplistingredient'> <ul> ${UstencileList}</ul></div>
+          `;
+}
+//-------------------------------------
+//fonction d'affichage de dropdown ustenciles /*--FIN--*/
+//-------------------------------------
 

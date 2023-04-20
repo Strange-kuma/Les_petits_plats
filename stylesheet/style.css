@@ -132,8 +132,64 @@ header {
 #wrapper_dropdown_search .dropdown:nth-child(2) {
   background-color: #20d47a;
 }
+#wrapper_dropdown_search .dropdown:nth-child(2) .dropdown-content-appareil {
+  width: 100%;
+  cursor: auto;
+}
+#wrapper_dropdown_search .dropdown:nth-child(2) .dropdown-content-appareil .Dplistingredient {
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+}
+#wrapper_dropdown_search .dropdown:nth-child(2) .dropdown-content-appareil .Dplistingredient ul {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+#wrapper_dropdown_search .dropdown:nth-child(2) .dropdown-content-appareil .Dplistingredient ul li {
+  list-style: none;
+  width: 14.2857142857%;
+  padding: 4px 0 4px 20px;
+}
+#wrapper_dropdown_search .dropdown:nth-child(2) .dropdown-content-appareil .Dplistingredient ul li a {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+#wrapper_dropdown_search .dropdown:nth-child(2) .dropdown-content-appareil .Dplistingredient ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.4509803922);
+}
 #wrapper_dropdown_search .dropdown:nth-child(3) {
   background-color: #ed6454;
+}
+#wrapper_dropdown_search .dropdown:nth-child(3) .dropdown-content-ustencil {
+  width: 100%;
+  cursor: auto;
+}
+#wrapper_dropdown_search .dropdown:nth-child(3) .dropdown-content-ustencil .Dplistingredient {
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+}
+#wrapper_dropdown_search .dropdown:nth-child(3) .dropdown-content-ustencil .Dplistingredient ul {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+#wrapper_dropdown_search .dropdown:nth-child(3) .dropdown-content-ustencil .Dplistingredient ul li {
+  list-style: none;
+  width: 16.6666666667%;
+  padding: 4px 0 4px 20px;
+}
+#wrapper_dropdown_search .dropdown:nth-child(3) .dropdown-content-ustencil .Dplistingredient ul li a {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+#wrapper_dropdown_search .dropdown:nth-child(3) .dropdown-content-ustencil .Dplistingredient ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.4509803922);
 }
 #wrapper_dropdown_search .dropdown:hover {
   cursor: pointer;
