@@ -1,72 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=100%, initial-scale=1.0" />
-    <link rel="stylesheet" href="stylesheet\style.css" />
 
-    <title>Document</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=100%, initial-scale=1.0" />
+  <link rel="stylesheet" href="stylesheet/style.css" />
+<link rel="shortcut icon" href="stylesheet/import/logo.svg" type="image/x-icon">
+  <title>Les petit plats</title>
+</head>
 
-  <body>
-    <header>
-      <a class="header_logo">
-        <img
-          src="stylesheet/import/logo.svg"
-          class="header_logo"
-          alt="Logo les petits plats"
-        />
-      </a>
-    </header>
-    <main>
-      <section id="section_search">
-        <div id="error"></div>
-        <div id="wrapper_input_search">
-          <input
-            type="search"
-            placeholder="Rechercher une recette"
-            name="Search_input"
-            id="Search_input"
-          />
-          <ion-icon id="search_clue" name="search"></ion-icon>
+<body>
+  <header>
+    <a class="header_logo">
+      <img src="stylesheet/import/logo.svg" class="header_logo" alt="Logo les petits plats" />
+    </a>
+  </header>
+  <main>
+    <section id="section_search">
+      <div id="error"></div>
+      <div id="wrapper_input_search">
+        <input type="search" placeholder="Rechercher une recette" name="Search_input" id="Search_input" />
+        <ion-icon id="search_clue" name="search"></ion-icon>
+      </div>
+      <div class="tag">
+        <!-- ARRAY OF TAGS EN JAVASCRIPT -->
+        <div class="taglist">
+          <p>carotte</p>
+          <ion-icon name="close-circle-outline"></ion-icon>
         </div>
-        <div id="wrapper_dropdown_search">
-          <div class="dropdown">
-            <button class="dropbtn" id="dropbtn1">
-              Ingredients <ion-icon name="arrow-dropdown"></ion-icon>
-            </button>
-            <div id="myDropdown" class="dropdown-content">
-              
-            </div>
-          </div>
-          <div class="dropdown">
-            <button class="dropbtn" id="dropbtn2">
-              Appareils <ion-icon name="arrow-dropdown"></ion-icon>
-            </button>
-            <div id="myDropdown2" class="dropdown-content">
-             
-            </div>
-          </div>
-          <div class="dropdown">
-            <button class="dropbtn" id="dropbtn3">
-              Ustensiles <ion-icon name="arrow-dropdown"></ion-icon>
-            </button>
-            <div id="myDropdown3" class="dropdown-content">
-            
-            </div>
+      </div>
+      <div id="wrapper_dropdown_search">
+        <div class="dropdown Ingredient">
+          
+          
+        </div>
+        <div class="dropdown Appareil">
+         
+        </div>
+        <div class="dropdown Ustencile">
+          <div class="dropdown-content-ustencil">
+
           </div>
         </div>
-      </section>
-      <section id="section_recipe">
-       
-      </section>
-    </main>
+       <!--  <div class="dropdown">
+          <button class="dropbtn" id="dropbtn1">
+            Ingredients <ion-icon name="arrow-dropdown"></ion-icon>
+          </button>
+          <div id="myDropdown" class="dropdown-content">
 
-    <script src="js/Fetch.js"></script>
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <script src="js/dropdown.js"></script>
-    <script src="js/tri.js"></script>
-    <script src="js/card.js"></script>
-  </body>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" id="dropbtn2">
+            Appareils <ion-icon name="arrow-dropdown"></ion-icon>
+          </button>
+          <div id="myDropdown2" class="dropdown-content">
+
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" id="dropbtn3">
+            Ustensiles <ion-icon name="arrow-dropdown"></ion-icon>
+          </button>
+          <div id="myDropdown3" class="dropdown-content">
+
+          </div>
+        </div> -->
+        </div>
+    </section>
+    <section id="section_recipe">
+
+    </section>
+  </main>
+
+  <script src="js/Fetch.js"></script>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script src="js/test.js"></script>
+  <script src="js/tri.js"></script>
+  <script src="js/card.js"></script>
+  <script src="js/globalfunction.js"></script>
+</body>
+
 </html>

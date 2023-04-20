@@ -1,14 +1,14 @@
-const recipeDisplay = async () => {
-    await fetchRecipes();
+const recipeDisplay = async (listofrecipes) => {
+    
 
     let sectionRecipes = document.querySelector('#section_recipe')
  
-    sectionRecipes.innerHTML = allRecipes.map((Recipes) => {
+    sectionRecipes.innerHTML = listofrecipes.map((Recipes) => {
 
         let recipeIngredients = Recipes.ingredients
         let ingredientsHtml = recipeIngredients.map((ing)=>
           ` <li>
-        <span>${ing.ingredient}</span> : ${ing.quantity} ${ing.unit}
+        <span>${ing.ingredient}</span> : ${ing.quantity ? ing.quantity.toString().trim() : ""} ${ing.unit ? ing.unit.toLowerCase().trim() : ""}
           </li>`
         ).join("")
         return `
@@ -35,4 +35,5 @@ const recipeDisplay = async () => {
 
 
 }
-recipeDisplay();
+
+

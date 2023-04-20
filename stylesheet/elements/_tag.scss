@@ -1,0 +1,27 @@
+.tag {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+
+    .taglist {
+        color: white;
+        padding: 5px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        height: 35px;
+        background-color: #0072ff;
+        border-radius: 5px;
+
+        ion-icon {
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        p {
+            margin-right: 20px;
+            font-size: 20px;
+        }
+    }
+}
