@@ -1,9 +1,9 @@
-const recipeDisplay = async () => {
-    await fetchRecipes();
+const recipeDisplay = async (listofrecipes) => {
+    
 
     let sectionRecipes = document.querySelector('#section_recipe')
  
-    sectionRecipes.innerHTML = allRecipes.map((Recipes) => {
+    sectionRecipes.innerHTML = listofrecipes.map((Recipes) => {
 
         let recipeIngredients = Recipes.ingredients
         let ingredientsHtml = recipeIngredients.map((ing)=>
@@ -35,4 +35,5 @@ const recipeDisplay = async () => {
 
 
 }
-recipeDisplay();
+
+

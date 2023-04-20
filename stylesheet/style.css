@@ -6,13 +6,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-body header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 25px;
-  margin-top: 25px;
-}
 body main {
   display: flex;
   flex-direction: column;
@@ -20,23 +13,28 @@ body main {
   justify-content: center;
   width: 90%;
 }
-body #section_search {
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+#section_search {
   width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-body #section_search #error {
-  color: red;
-  font-weight: bold;
-}
-body #section_search #wrapper_input_search {
+#section_search #wrapper_input_search {
   width: 100%;
   display: flex;
   align-items: center;
 }
-body #section_search #wrapper_input_search input[type=search] {
+#section_search #wrapper_input_search input[type=search] {
   width: 100%;
   height: 50px;
   background-color: rgb(224, 224, 224);
@@ -44,101 +42,111 @@ body #section_search #wrapper_input_search input[type=search] {
   padding: 10px;
   border-radius: 5px;
 }
-body #section_search #wrapper_input_search ion-icon {
+#section_search #wrapper_input_search ion-icon {
   color: black;
   margin-left: -50px;
   font-size: 30px;
 }
-body #section_search #wrapper_dropdown_search {
+
+#error {
+  color: red;
+  font-weight: bold;
+}
+
+.tag {
+  padding: 15px;
+  width: 100%;
+  display: flex;
+}
+.tag .taglist {
+  color: white;
+  padding: 5px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+  background-color: #0072ff;
+  border-radius: 5px;
+}
+.tag .taglist ion-icon {
+  cursor: pointer;
+  font-size: 20px;
+}
+.tag .taglist p {
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+#wrapper_dropdown_search {
   display: flex;
   width: 100%;
-  /* The container <div> - needed to position the dropdown content */
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 }
-body #section_search #wrapper_dropdown_search .dropdown {
-  position: relative;
-  display: inline-block;
-  padding-top: 15px;
-  /* Dropdown Button */
-  /* Dropdown Content (Hidden by Default) */
+#wrapper_dropdown_search .dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  height: 30px;
+  background-color: #0072ff;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-right: 20px;
+  color: white;
+  padding: 10px;
 }
-body #section_search #wrapper_dropdown_search .dropdown #myDropdown ul {
+#wrapper_dropdown_search .dropdown input[type=search] {
+  width: 90%;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+#wrapper_dropdown_search .dropdown .dropdown-content-ingredient {
+  width: 100%;
+  cursor: auto;
+}
+#wrapper_dropdown_search .dropdown .dropdown-content-ingredient .Dplistingredient {
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+}
+#wrapper_dropdown_search .dropdown .dropdown-content-ingredient .Dplistingredient ul {
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
-body #section_search #wrapper_dropdown_search .dropdown #myDropdown ul li {
+#wrapper_dropdown_search .dropdown .dropdown-content-ingredient .Dplistingredient ul li {
   list-style: none;
+  width: 14.2857142857%;
+  padding: 4px 0 4px 20px;
 }
-body #section_search #wrapper_dropdown_search .dropdown #dropbtn2 {
+#wrapper_dropdown_search .dropdown .dropdown-content-ingredient .Dplistingredient ul li a {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+#wrapper_dropdown_search .dropdown .dropdown-content-ingredient .Dplistingredient ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.4509803922);
+}
+#wrapper_dropdown_search .dropdown:nth-child(2) {
   background-color: #20d47a;
 }
-body #section_search #wrapper_dropdown_search .dropdown #myDropdown2 {
-  background-color: #20d47a !important;
-}
-body #section_search #wrapper_dropdown_search .dropdown #myDropdown2 ul {
-  padding: 0;
-}
-body #section_search #wrapper_dropdown_search .dropdown #myDropdown2 ul li {
-  list-style: none;
-}
-body #section_search #wrapper_dropdown_search .dropdown #dropbtn3 {
+#wrapper_dropdown_search .dropdown:nth-child(3) {
   background-color: #ed6454;
 }
-body #section_search #wrapper_dropdown_search .dropdown #myDropdown3 {
-  background-color: #ed6454 !important;
-}
-body #section_search #wrapper_dropdown_search .dropdown #myDropdown3 ul {
-  padding: 0;
-}
-body #section_search #wrapper_dropdown_search .dropdown #myDropdown3 ul li {
-  list-style: none;
-}
-body #section_search #wrapper_dropdown_search .dropdown .dropbtn {
-  background-color: #0072ff;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
+#wrapper_dropdown_search .dropdown:hover {
   cursor: pointer;
-  border-radius: 5px;
-  margin-right: 15px;
-  /* Dropdown button on hover & focus */
 }
-body #section_search #wrapper_dropdown_search .dropdown .dropbtn:hover, body #section_search #wrapper_dropdown_search .dropdown .dropbtn:focus {
-  background-color: #0072ff;
-}
-body #section_search #wrapper_dropdown_search .dropdown .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #0072ff;
-  min-width: 160px;
-  margin-top: -5px;
-  z-index: 1;
-  /* Links inside the dropdown */
-  /* Change color of dropdown links on hover */
-}
-body #section_search #wrapper_dropdown_search .dropdown .dropdown-content a {
-  color: rgb(255, 255, 255);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-body #section_search #wrapper_dropdown_search .dropdown .dropdown-content a:hover {
-  background-color: #ddd;
-}
-body #section_search #wrapper_dropdown_search .show {
-  display: flex !important;
-}
-body #section_search #wrapper_dropdown_search .show ul {
-  width: 120px;
-}
-body #section_recipe {
+
+#section_recipe {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 90%;
   margin-top: 50px;
 }
-body #section_recipe article {
+#section_recipe article {
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -149,42 +157,42 @@ body #section_recipe article {
   margin-bottom: 35px;
   border-radius: 5px;
 }
-body #section_recipe article .legendecard {
+#section_recipe article .legendecard {
   width: 100%;
   height: 300px;
   background-color: #ddd;
 }
-body #section_recipe article .legendecard .title {
+#section_recipe article .legendecard .title {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 7px;
 }
-body #section_recipe article .legendecard .title span {
+#section_recipe article .legendecard .title span {
   font-weight: bold;
   font-size: 20px;
 }
-body #section_recipe article .legendecard .content {
+#section_recipe article .legendecard .content {
   display: flex;
   width: 100%;
 }
-body #section_recipe article .legendecard .content .ingredient {
+#section_recipe article .legendecard .content .ingredient {
   width: 50%;
 }
-body #section_recipe article .legendecard .content .ingredient ul {
+#section_recipe article .legendecard .content .ingredient ul {
   padding: 10px;
 }
-body #section_recipe article .legendecard .content .ingredient ul li {
+#section_recipe article .legendecard .content .ingredient ul li {
   list-style: none;
 }
-body #section_recipe article .legendecard .content .ingredient ul li span {
+#section_recipe article .legendecard .content .ingredient ul li span {
   font-weight: bold;
 }
-body #section_recipe article .legendecard .content .descriptif {
+#section_recipe article .legendecard .content .descriptif {
   width: 50%;
   overflow: hidden;
 }
-body #section_recipe article .legendecard .content .descriptif p {
+#section_recipe article .legendecard .content .descriptif p {
   display: -webkit-box;
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;

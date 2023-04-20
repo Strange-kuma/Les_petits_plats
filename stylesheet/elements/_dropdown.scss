@@ -1,0 +1,111 @@
+#wrapper_dropdown_search {
+    display: flex;
+    width: 100%;
+
+    .dropdown {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 200px;
+        height: 30px;
+        background-color: #0072ff;
+        font-size: 20px;
+        border-radius: 5px;
+        margin-right: 20px;
+        color: white;
+        padding: 10px;
+
+        input[type="search"] {
+            width: 90%;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+
+        }
+
+        .dropdown-content-ingredient {
+            width: 100%;
+            cursor: auto;
+
+            .Dplistingredient {
+                display: flex;
+                flex-wrap: wrap;
+                color: #fff;
+
+                ul {
+                    padding: 0;
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    li {
+
+                        list-style: none;
+                        width: calc(100%/7);
+                        padding: 4px 0 4px 20px;
+
+                        a {
+                            padding: 10px;
+                            text-decoration: none;
+                            color: white;
+                            font-size: 15px;
+
+                            &:hover {
+                                background-color: #ffffff73;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            background-color: #20d47a;
+        }
+
+        &:nth-child(3) {
+            background-color: #ed6454;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+}
+
+
+
+
+
+// #wrapper_dropdown_search {
+//     display: flex;
+//     width: 100%;
+
+
+
+//     /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+//     .show {
+
+//         display: flex !important;
+
+//         .Dplistingredient {
+//             display: flex;
+//             flex-wrap: wrap;
+//             color: #fff;
+//             width: 1500px;
+//             padding: 25px;
+//         }
+
+//         ul {
+
+//             display: flex;
+//             flex-wrap: wrap;
+
+//             li {
+//                 width: calc(100%/13);
+//                 padding: 4px 0 4px 20px;
+//             }
+//         }
+//     }
+// }

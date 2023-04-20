@@ -1,80 +1,71 @@
-let ButtonIngredient = document.querySelector("#dropbtn1")
-let ButtonAppareil = document.querySelector("#dropbtn2")
-let ButtonUstensile = document.querySelector("#dropbtn3")
+let ButtonIngredient = document.querySelector("#dropbtn1");
+let ButtonAppareil = document.querySelector("#dropbtn2");
+let ButtonUstensile = document.querySelector("#dropbtn3");
 
-let dropdownContentsIngredient = document.querySelector('#myDropdown')
-let dropdownContentsAppareil = document.querySelector('#myDropdown2')
-let dropdownContentsUstensile = document.querySelector('#myDropdown3')
-
-
-// document.querySelectorAll(".dropbtn").forEach(button => {
-//     button.addEventListener('click', event => {
-//        dropdowncontent.classList.toggle("show")
-
-//     });
-// });
+let dropdownContentsIngredient = document.querySelector("#myDropdown");
+let dropdownContentsAppareil = document.querySelector("#myDropdown2");
+let dropdownContentsUstensile = document.querySelector("#myDropdown3");
 
 
+//-------------------------------------
+//fonction d'affichage du dropdown ingredient
+//-------------------------------------
+async function dropdowncontentIngredient() {
+  await fetchRecipes();
 
-async function dropdowncontent() {
-    await fetchRecipes();
-
-
-
-    ButtonIngredient.addEventListener('click', function () {
-        dropdownContentsIngredient.classList.toggle("show");
-        dropdownContentsIngredient.innerHTML = allRecipes.map((recipes) => {
-          
-
-
-            let ingredient =recipes.ingredients
-       
-
-                let ingredientList = ingredient.map((ing) =>
-                    `<li><a href="">${ing.ingredient}</a></li>`
-                ).join("")
-                return `
-
-                <div><ul>${ingredientList}</ul></div>
-                `
-            }).join("")
-        })
-
-            ButtonAppareil.addEventListener('click', function () {
-                dropdownContentsAppareil.classList.toggle("show");
-                dropdownContentsAppareil.innerHTML = allRecipes.map((recipes) => {
-                    let appareil = recipes.appliance
-
-
-                    let appareilList = appareil.map((ing) =>
-                        `<li><a href="">${ing.appliance}</a></li>`
-                    ).join("")
-                    return `
-          
-            <div><ul>${appareilList}</ul></div>
-            `
-                }).join("")
-            })
-        ButtonUstensile.addEventListener('click', function () {
-            dropdownContentsUstensile.classList.toggle("show");
-
-        })
-
-        // let ustensils = recipes.ustensils
-    }
-dropdowncontent()
-
-window.onclick = function (event) {
-    if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-                dropdownContentsIngredient.innerHTML = ""
-                dropdownContentsAppareil.innerHTML = ""
-            }
-        }
-    }
+  ButtonIngredient.addEventListener("click", function () {
+    const deleteDuplicates = (array) => {
+      let cleanDuplicate = [];
+      array.forEach((item) => {
+        cleanDuplicate.indexOf(item) == -1 ? cleanDuplicate.push(item) : "";
+      });
+      return cleanDuplicate;
+    };
+    let allIngredients = [];
+    allRecipes.map((recipe) => {
+      recipe.ingredients.forEach((ing) => {
+        allIngredients.push(ing.ingredient);
+      });
+    });
+    let tabIngredients = deleteDuplicates(allIngredients);
+    let ingredientList = "";
+    dropdownContentsIngredient.classList.toggle("show");
+    dropdownContentsIngredient.innerHTML = tabIngredients.forEach(
+      (ingredient) => {
+        ingredientList += `<li><a href="">${ingredient}</a></li>`;
+      }
+    );
+    dropdownContentsIngredient.innerHTML = `
+        <div class='Dplistingredient'> <ul> ${ingredientList}</ul></div>
+        `;
+  });
 }
+//-------------------------------------
+//fonction d'affichage du dropdown appareil 
+//-------------------------------------
+function dropdowncontentAppareil() {
+  ButtonAppareil.addEventListener('click', function () {
+    const deleteDuplicates = (array) => {
+      let cleanDuplicate = [];
+      array.forEach((item) => {
+        cleanDuplicate.indexOf(item) == -1 ? cleanDuplicate.push(item) : "";
+      });
+      return cleanDuplicate;
+    };
+    dropdownContentsAppareil.classList.toggle("show");
+    let tabAppareil = deleteDuplicates(allRecipes.appliance);
+    let AppareilList = "";
+    dropdownContentsAppareil.classList.toggle("show");
+    dropdownContentsAppareil.innerHTML = tabAppareil.forEach(
+      (Appareil) => {
+        AppareilList += `<li><a href="">${Appareil}</a></li>`;
+      }
+    );
+    dropdownContentsAppareil.innerHTML = `
+        <div class='Dplistingredient'> <ul> ${AppareilList}</ul></div>
+        `;
+  })
+}
+
+
+
