@@ -95,7 +95,7 @@ header {
   padding: 10px;
 }
 #wrapper_dropdown_search .dropdown input[type=search] {
-  width: 90%;
+  width: 100%;
   background: none;
   border: none;
   color: white;
@@ -180,9 +180,11 @@ header {
   flex-wrap: wrap;
 }
 #wrapper_dropdown_search .dropdown:nth-child(3) .dropdown-content-ustencil .Dplistingredient ul li {
+  display: flex;
+  align-items: center;
   list-style: none;
   width: 16.6666666667%;
-  padding: 4px 0 4px 20px;
+  padding: 4px 0 4px 10px;
 }
 #wrapper_dropdown_search .dropdown:nth-child(3) .dropdown-content-ustencil .Dplistingredient ul li a {
   padding: 10px;

@@ -57,7 +57,6 @@ async function dropdowncontentIngredient() {
 //fonction d'affichage de dropdown appareil /*--DEBUT--*/
 //-------------------------------------
 dropdownAppareil.addEventListener('click', () => {
-    dropdownAppareil.innerHTML = `<input type="search" placeholder="Rechercher un ingrédient" name="" id="">`
     dropdownAppareil.style.width = "1000px"
     dropdownAppareil.style.height = "200px"
     dropdownAppareil.style.flexDirection = "column"
@@ -99,12 +98,11 @@ async function dropdowncontentAppareil() {
 //fonction d'affichage de dropdown ustenciles /*--DEBUT--*/
 //-------------------------------------
 dropdownUstencile.addEventListener('click', () => {
-    dropdownUstencile.innerHTML = `<input type="search" placeholder="Rechercher un ingrédient" name="" id="">`
     dropdownUstencile.style.width = "1000px"
     dropdownUstencile.style.height = "800px"
     dropdownUstencile.style.flexDirection = "column"
     dropdownUstencile.innerHTML = `
-    <input type="search" placeholder="Rechercher un ingrédient" name="" id="">
+    <input type="search" placeholder="Rechercher un ustencile" name="" id="">
     <div class="dropdown-content-ustencil"></div>
     `
     dropdowncontentUstencile()
